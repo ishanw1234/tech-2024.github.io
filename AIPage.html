@@ -1,0 +1,339 @@
+e  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fullscreen Video</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="icon" href="robot1.png">
+  <script src="https://kit.fontawesome.com/5863a95335.js" crossorigin="anonymous"></script>
+  
+
+
+  <style>
+
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Rowdies:wght@700&family=Tac+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Rubik+Scribble&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Modern+Antiqua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+  background-color:#0C0000;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+
+h1 {
+top:100;
+color: white;
+}
+#bannerText2 {
+  position: relative;  /* Ensures the text stays below the video */
+  color: white;
+  font-size: 30px;
+  top: 25vh;  /* Adjusts the position based on video height */
+  text-align: center;  /* Centers the text horizontally */
+  padding: 10px;  /* Adds some padding for readability */
+  font-family: "Rowdies", sans-serif;
+  font-weight:700;
+}
+
+#bannerText {
+  position: relative;  /* Ensures the text stays below the video */
+  color: white;
+  font-size: 25px;
+  top: 25vh;  /* Adjusts the position based on video height */
+  text-align: center;  /* Centers the text horizontally */
+  padding: 10px;  /* Adds some padding for readability */
+  font-family: "Indie Flower", cursive, "FontAwesome";
+  font-weight:700;
+}
+.content {
+  margin:20px;
+  position:relative;
+  top:50vh;
+  font-size:20px;
+  color:white;
+
+
+}
+
+#myVideo {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25vh;  /* Sets the height to 25% of viewport height */
+  object-fit: cover;  /* Ensures video fills the container */
+}
+.hi{
+  position:relative;
+  text-align: center;
+  top:10vh;
+  color:white;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size:30px;
+}
+.button1{
+  position:relative;
+  text-align:center;
+  top:23vh;
+  
+}
+.history{
+  color:azure;
+  font-size: 18px;
+  font-family: "Rubik Scribble", system-ui;
+  font-weight:550;
+}
+.history_heading{
+  font-family: "Rubik Scribble", system-ui;
+  font-size:30px;
+  color: white;
+  font-weight: 800;
+
+}
+.History-Heading{
+  font-family: "Rakkas", serif;
+  font-size:40px;
+  color:white;
+  text-align:center;
+}
+.fa fa-timeline{
+  font-size:10px;
+}
+.button_op{
+  position:relative;
+  margin:10px 0;
+  font-family: "Poppins", sans-serif;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 4vh;
+  flex-direction: column;
+  display: inline-block;
+  padding:10px 26px;
+  color:#fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  background: linear-gradient(90deg,#0162c8,#55e7fc);
+  overflow:hidden;
+}
+.button_op:nth-child(2){
+  background: linear-gradient(90deg,#755bea,#ff72c0);
+}
+.color{
+  position:relative;
+  top:-25px;
+  border-width: 2px;
+}
+.backgroundchange{
+  position:relative;
+  margin:10px 0;
+  font-family: "Poppins", sans-serif;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 1vh;
+  flex-direction: column;
+  display: inline-block;
+  padding:10px 26px;
+  color:#fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  background: linear-gradient(90deg,#c8010b,#fc5555);
+  overflow:hidden;
+}
+.timeline{
+  position:relative;
+  text-align: center;
+  justify-content: center;
+  align-content: center;
+  
+}
+.timeline_text{
+  font-family: "Rowdies";
+  font-size: 30;
+  color:white;
+  text-align: center;
+}
+
+.ai_heading, .ai_heading_bard{
+  position:relative;
+  text-align: center;
+  font-family: "Bungee Spice", sans-serif;
+  color:whitesmoke;
+  font-size: 40px;
+  margin-bottom:20px;
+  
+}
+.ai_content{
+  position: relative;
+  font-family: "Modern Antiqua", serif;
+  color:lightgreen;
+  font-size:15px;
+  padding-left:20px;}
+.ai_content_bard{
+  position: relative;
+  font-family: "Modern Antiqua", serif;
+  color:purple;
+  font-size:15px;
+  padding-left:20px;
+  
+
+}
+.ChatGPT_video{
+  max-width: 100%;
+  flex-basis:40;
+  display:flex;
+}
+.Bard_video{
+  max-width: 100%;
+  flex-basis:40;
+  display:flex;
+}
+.openai_link{
+  color:lightgreen;
+}
+.openai_link_w{
+  color:lightgreen;
+  text-decoration: none;
+}
+.container, .container_bard{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap:wrap;
+}
+.content1, .content_bard{
+  flex:1;
+}
+.content_bard{
+  order:1;
+}
+.Bard_video{
+  order:2;
+}
+
+  </style>
+
+
+</head>
+
+<body>
+  
+      
+  <video id="myVideo" autoplay muted loop>
+    <source src="AIBanner.mp4" type="video/mp4">
+    Your browser does not support the video tag :(
+  </video>
+
+<p id="bannerText2">Here's some cool information about AI!</p>
+<div id="bannerText">
+    <li class="fa fa-user-doctor"> </li> Medical revolution : AI analyzes vast amounts of medical data to detect diseases like cancer earlier and more accurately.
+    <li class="fa fa-car-side"> </li> Self-driving cars : AI makes self-driving cars a reality, with the potential to significantly reduce traffic accidents.<br>
+    <li class="fa fa-music"></li> AI gets creative : AI composes music like famous artists and generates stunning images based on simple descriptions.
+    <br><li class="fa fa-language"></li> Language barriers : Real-time AI translation facilitates conversations across languages, fostering a more connected world.<br>
+    <li class="fa fa-user-group"></li> Collaborative future : AI is envisioned as a partner, not a replacement for humans. Imagine AI assistants anticipating your needs and strea0mlining daily tasks.
+    <br>
+    <br>
+</div>
+<div class="button1"> <a href="#home"><div class="fa fa-angle-down fa-beat fa-xl" style="color: #fffff5;"> </div></a></div>
+<br><br><br><br><br><br><br><br><br><br><br>
+<div class="History-Heading">History of AI <div class="fa fa-timeline fa-beat-fade" style="font-size:28px"></div></div>
+<div class="history">
+  
+  <div class="history_heading">Early Beginnings (Before 1950s):</div><br>
+  The seeds of AI were sown in ancient cultures with stories of artificial beings like Pygmalion's Galatea.
+  Philosophers like Aristotle pondered the nature of intelligence and whether it could be replicated mechanically.
+  <br><br>
+  <div class="history_heading">Birth of AI (1950s):</div><br>
+  
+  The development of digital computers in the 1940s laid the foundation for modern AI research.
+  Alan Turing, a pioneer in computer science, proposed the Turing Test in 1950 as a benchmark for machine intelligence.
+  In 1956, John McCarthy coined the term "artificial intelligence" at the Dartmouth Workshop, a historic event that marked the official launch of AI research.
+  <br><br><div class="history_heading">Early Optimism and Challenges (1960s-1970s):</div><br>
+  
+  The 1960s saw a surge in enthusiasm for AI, with researchers making significant progress in areas like game playing and theorem proving.
+  However, limitations in computing power and the complexity of human intelligence led to a period of disillusionment in the 1970s, known as the "AI Winter."
+  Resurgence and Progress 
+  <br><br><div class="history_heading">(1980s-Present):</div><br>
+  
+  The development of more powerful computers and the rise of machine learning techniques like neural networks revitalized AI research in the 1980s.
+  Today, AI is experiencing a new golden age. AI applications are transforming various industries, from healthcare and finance to transportation and entertainment.
+  <br><br><div class="history_heading">The Future of AI:</div><br>
+  As AI continues to evolve, there is ongoing debate about its potential impact on society.
+  Researchers are exploring ways to develop safe and ethical AI systems that can benefit humanity.</div>
+  <br>
+                    <button onclick=showDiv() class="backgroundchange" id="toggleButton">Change Background</button>
+                    <div style="display:none;" id="backgroundchange">
+                    <a href="#"><p onclick=change() id="button_op" class="button_op">ENTER</p></a>
+                    <input type="color" class="color" style="width:80px;height:30px" value="#ff0000" id="selector"></div>
+
+
+  <script type="text/javascript">
+  const button = document.getElementById("toggleButton");
+const divElement = document.getElementById("backgroundchange");
+
+button.addEventListener("click", function() {
+  if (divElement.style.display === "none") {
+    divElement.style.display = "block";
+    button.textContent = "Change Background";
+  } else {
+    divElement.style.display = "none";
+    button.textContent = "Change Background";
+  }
+});
+    
+  function change(){
+    let c = document.getElementById("selector").value;
+    document.body.style.backgroundColor = c;}
+
+ </script>
+ <div class="timeline_text" id="home">Some Popular AI Applications:</div><br>
+<div class="timeline">
+  <img src="Timeline AI.png" width="850px" height="450px"> </img></div>
+  
+<div class="container">
+<video class="ChatGPT_video"autoplay muted loop height="500px" width="700px">
+    <source src="ChatGPT.mp4" type="video/mp4">
+  </video>
+  <div class="content1">
+  <div class="ai_heading">Chat GPT (GPT-4)</div>
+  <div class="ai_content">Chat GPT is one of the most versatile and popular LLMs that started the AI Boom. It was launched in November 2022 by OpenAI and has attracted billions of users since its release. It offers a simple UI, insane creativity and is one of the most stable model so far. It has both, a Paid Model(GPT-4) as well as a Free Model(GPT-3.5) and the paid model comes with DALL-E Browsing which enables image generation. You can use it for writing poems for your loved ones, planning events, writing simple codes, getting amazing recipes from dishes all around the world, getting pickup lines and what not!! It is used by hundreds of other AI tools as its base model. Prompt engineering can be used to get amazingly well results like a Professional, Friendly, Casual or a Humourous tone and the introduction of Internet Connectivity has opened its doors to the new information happening all around the world as well. It is available at <a class="openai_link"href="https://www.openai.com">www.openai.com</a> and get more information about OpenAI here <a class="openai_link_w" href="openai.html">--></a>
+</div></div>
+<br>
+<div class="container_bard">
+  <video class="Bard_video"autoplay muted loop height="500px" width="700px">
+      <source src="Bard.mp4" type="video/mp4">
+    </video>
+    <div class="content_bard">
+    <div class="ai_heading_bard">Gemini (Bard)</div>
+    <div class="ai_content_bard">Gemini (previously known as Bard) is an LLM introduced by Google developed by their DeepMind Research Faculty. It was launched by March 21, 2023 but didn't get much hype until Feb 2024 when it was re-branded to Gemini and Google made some big promises about their New-Gen AI Model. Like ChatGPT, it comes in two variants, one being paid and the other one being free. It also offers free image generation but as of April 2024 it is not very reliable. It is one of my favourite LLM but it does give incorrect information sometimes so it is not as reliable as ChatGPT but excels at giving factual answers rather than GPT which is known for its creative answers. It has realtime access to Internet even in its free variant which gives it an edge and the best alternative to Chat GPT. Gemini has also been embedded in Gmail, Google Docs and in almost all Google Products to increase ease of access. It is available at <a class="openai_link"href="https://gemini.google.com" style="color:purple">gemini.google.com</a> and get more information about OpenAI here <a class="openai_link_w" href="gemini.html" style="color:purple;">--></a>
+  </div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

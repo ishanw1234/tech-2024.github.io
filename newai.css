@@ -366,7 +366,7 @@ margin-top:8px;
     margin-left:-2px;
   }
   .aesthetic-rectangle::after,.aesthetic-rectangle::before {
-    translate:-50%, -50%;
+    transform:translate(-50%, -50%);
     content:'';
     position:absolute;
     background-image:conic-gradient(#ff4545, #00ff99, #006aff, #ff0095, #ff4545);

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scaale=1.0">
   <title>Fullscreen Video</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -10,17 +10,43 @@
   <link rel="icon" href="robot1.png">
   <script src="https://kit.fontawesome.com/5863a95335.js" crossorigin="anonymous"></script>
 </head>
+<body>
+
 <div class="fa-solid fa-bars" id="try5"></div>
-<div class="rectangle-container">
-    <div class="default" id="navbar"><div style="color:white; font-size:30px; text-align:center;margin-top:20px;">Hi</div></div>
+<div class="zindex">
+<div class="invisible" id="navbar">
+    <a href="home.html" style="text-decoration:none;">
+    <div style="color:white; font-size:30px; text-align:center;margin-top:15px;padding:20px; z-index:2">Home</div>
+  </a>
+  <a href="aboutme.html" style="text-decoration:none;">
+    <div style="color:white; font-size:30px; text-align:center;">About Me</div>
+  </a>
+  <a href="gallery.html" style="text-decoration:none;">
+    <div style="color:white; font-size:30px; text-align:center;padding:20px;">Gallery</div>
+  </a>
+  <a href="moreinfo.html" style="text-decoration:none;">
+    <div style="color:white; font-size:30px; text-align:center;">More Info</div>
+    </a>
+  <a href="contact.html" style="text-decoration:none;">
+    <div style="color:rgb(255, 255, 255); font-size:30px; text-align:center;padding-top:20px;padding-left: 10px;padding-right:10px;">Contact Us</div>
+  </a>
+
   </div>
+  </div>
+</div>
+
+
+
+
+
   <video id="myVideo" autoplay muted loop>
     <source src="AIBanner.mp4" type="video/mp4">
     Your browser does not support the video tag :(
   </video>
 
-<p id="bannerText2">Here's some cool information about AI!</p>
+<p id="bannerText2" style="z-index:default;">Here's some cool information about AI!</p>
 <div id="bannerText">
+
     <li class="fa fa-user-doctor"> </li> Medical revolution : AI analyzes vast amounts of medical data to detect diseases like cancer earlier and more accurately.
     <li class="fa fa-car-side"> </li> Self-driving cars : AI makes self-driving cars a reality, with the potential to significantly reduce traffic accidents.<br>
     <li class="fa fa-music"></li> AI gets creative : AI composes music like famous artists and generates stunning images based on simple descriptions.
@@ -56,42 +82,11 @@
   As AI continues to evolve, there is ongoing debate about its potential impact on society.
   Researchers are exploring ways to develop safe and ethical AI systems that can benefit humanity.</div>
   <br>
-                    <button onclick=showDiv() class="backgroundchange" id="toggleButton">Change Background</button>
-                    <div style="display:none;" id="backgroundchange">
-                    <a href="#"><p onclick=change() id="button_op" class="button_op">ENTER</p></a>
-                    <input type="color" class="color" style="width:80px;height:30px" value="#ff0000" id="selector"></div>
 
-
-  <script type="text/javascript">
-  const button = document.getElementById("toggleButton");
-const divElement = document.getElementById("backgroundchange");
-button.addEventListener("click", function() {
-  if (divElement.style.display === "none") {
-    divElement.style.display = "block";
-    button.textContent = "Change Background";
-  } else {
-    divElement.style.display = "none";
-    button.textContent = "Change Background";
-  }
-});
-    
-  function change(){
-    let c = document.getElementById("selector").value;
-    document.body.style.backgroundColor = c;}
-  document.getElementById('navbar-toggle').addEventListener('click', function() {
-  var navbarMenu = document.getElementById('navbar-menu');
-  if (navbarMenu.style.display === 'block') {
-    navbarMenu.style.display = 'none';
-  } else {
-    navbarMenu.style.display = 'block';
-  }
-});
- </script>
  <div class="timeline_text" id="home">Some Popular AI Applications:</div>
 
-
 <div class="ChatGPT_Container">
-<video class="ChatGPT_video"autoplay muted loop height="500px" width="700px" loading="lazy">
+<video style="z-index:-1;" class="ChatGPT_video"autoplay muted loop height="500px" width="700px" loading="lazy">
     <source src="ChatGPT.mp4" type="video/mp4">
   </video>
   <div class="content_gpt" id="main">
@@ -102,17 +97,17 @@ button.addEventListener("click", function() {
 
 
 <div class="container_bard">
-  <video class="Bard_video"autoplay muted loop height="500px" width="700px" loading="lazy">
+  <video style="z-index:-1;" class="Bard_video"autoplay muted loop height="500px" width="700px" loading="lazy">
       <source src="Bard.mp4" type="video/mp4">
     </video>
-    <div class="content_bard">
+    <div class="content_bard" style="z-index:-1;">
     <div class="ai_heading_bard">Gemini (Bard)</div>
     <div class="ai_content_bard">Gemini (previously known as Bard) is an LLM introduced by Google developed by their DeepMind Research Faculty. It was launched by March 21, 2023 but didn't get much hype until Feb 2024 when it was re-branded to Gemini and Google made some big promises about their New-Gen AI Model. Like ChatGPT, it comes in two variants, one being paid and the other one being free. It also offers free image generation but as of April 2024 it is not very reliable. It is one of my favourite LLM but it does give incorrect information sometimes so it is not as reliable as ChatGPT but excels at giving factual answers rather than GPT which is known for its creative answers. It has realtime access to Internet even in its free variant which gives it an edge and the best alternative to Chat GPT. Gemini has also been embedded in Gmail, Google Docs and in almost all Google Products to increase ease of access. It is available at <a class="openai_link"href="https://gemini.google.com" style="color:purple">gemini.google.com</a> and get more information about Gemini here <a class="openai_link_w" href="gemini.html" style="color:purple;">--></a>
   </div></div></div>
   
 
   <div class="container_perplexity">
-    <video class="perplexity_video"autoplay muted loop height="500px" width="700px">
+    <video style="z-index:-1;" class="perplexity_video"autoplay muted loop height="500px" width="700px">
       <source src="ChatGPT.mp4" type="video/mp4">
     </video>
   <div class="content_perplexity">
@@ -125,27 +120,60 @@ button.addEventListener("click", function() {
   <div class="ImageGen_Heading">AI Image Generation</div>
 
   <div class="container_leonardo">
-    <video class="leonardo_video"autoplay muted loop height="500px" width="700px">
-      <source src="ChatGPT.mp4" type="video/mp4">
+    <video class="leonardo_video" style="margin-top:80px;"autoplay muted loop height="340px";>
+      <source src="D:\Extra Files\AI Images\Rabbit.mp4" type="video/mp4">
     </video>
-  <div class="content_leonardo">
-    <div class="ai_heading_leonardo">Perplexity</div>
-    <div class="ai_content_leonardo"> Perplexity is a new AI-Powered LLM that's shaking things up. It utilizes natural language processing to understand your search intent and provide comprehensive answers, not just keyword-stuffed links. It prioritizes credible sources with citations and delivers up-to-date information. You can even ask follow-up questions within the same search for a more interactive experience. With a freemium model and mobile app availability, Perplexity offers a promising alternative to traditional search engines and other LLM's like GPT and Gemini. It also has an amazing feature that lets you add a lot more words than ChatGPT and Gemini by converting it to txt and it can be useful to get information about a specific text that's large enough to not be put entirely at once in GPT or Gemini.  It is available at <a class="openai_link"href="https://perplexity.ai" style="color:lightgreen">perplexity.ai</a> and get more information about Perplexity here <a class="openai_link_w" href="perplexity.html" style="color:lightgreen;">--></a>
+    <img class="leonardo_video" src="guy.jpg" style="height:340px; width:340px; margin-top:80px; margin-right:20px; margin-left:20px"></img>
+  <div style="z-index:-1;"class="content_leonardo">
+    <div class="ai_heading_leonardo">Leonardo</div>
+    <div class="ai_content_leonardo">Leonardo AI stands out because it simplifies complex tasks and enhances creativity by providing intuitive, actionable insights. Unlike other AI tools, Leonardo AI is designed to be user-friendly and adaptable, making it accessible even for those without extensive technical expertise. Its ability to offer personalized recommendations and automate repetitive tasks allows users to focus more on innovation and strategic thinking. This combination of ease-of-use and powerful functionality makes Leonardo AI a superior choice for those looking to integrate AI seamlessly into their creative and business processes.It has got tons of features that include Realtime Canvas, Motion, Upscaler, Canvas Editor and even a Realtime Image Generator. It's recent acquisition by Canva has opened even more doors for this little known AI. It is available at <a href="https://app.leonardo.ai" style="color:purple">leonardo.ai</a> and get more information about Leonardo here <a class="openai_link_w" href="perplexity.html" style="color:purple;">--></a>
   </div></div>
-  
-  
-  <div class="navbar">
-  <ul class="navigation">
-  <li>
 
 
-<span class="material-symbols-outlined"></span>
-
-</li></ul></div>
 <script>
+
+ function changeScrollbarBackground(gradient) {
+            document.body.style.setProperty('--scrollbar-thumb-bg', gradient);
+        };
+        function changeScrollbarBackground2(gradient) {
+            document.body.style.setProperty('--scrollbar-thumb-bg-hover', gradient);
+        };
+        // Listen for the "Up" arrow key press
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowUp') {
+                changeScrollbarBackground('linear-gradient(rgba(236, 253, 0, 0.8), rgba(229, 255, 0, 0.095))') 
+            }
+        });
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowDown') {
+                changeScrollbarBackground('linear-gradient(rgba(236, 253, 0, 0.096), rgba(229, 255, 0, 0.836))') 
+            }
+        });
+        let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (scrollTop < lastScrollTop) { // Scrolling up
+                changeScrollbarBackground2('linear-gradient(rgb(66, 24, 255),rgba(100, 73, 255, 0.055)'); // Gradient on scroll up
+            } else if (scrollTop > lastScrollTop) { // Scrolling down
+                changeScrollbarBackground2('linear-gradient(rgba(100, 73, 255, 0.055),rgb(66, 24, 255))'); // Gradient on scroll down
+            }
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+
+clearTimeout(isScrolling);
+
+// Set a timeout to keep the background as-is if user stops scrolling
+isScrolling = setTimeout(function() {
+    changeScrollbarBackground('linear-gradient(rgba(100, 73, 255, 0.055),rgb(66, 24, 255));'); // Default gradient when idle
+}, 500); // Adjust timeout as needed
+});
+
+
+
+
         document.getElementById("navbar");
         function navbar_come(){
-            navbar.classList.remove("default"), navbar.classList.remove("opacity");;
+            navbar.classList.remove("default"), navbar.classList.remove("invisible");;
             navbar.classList.add("aesthetic-rectangle");
             navbar.classList.add("rectangle_animate");
             setTimeout(() => {
@@ -154,11 +182,11 @@ button.addEventListener("click", function() {
         };
         document.getElementById("navbar");
         function navbar_go(){
-            navbar.classList.remove("default"), navbar.classList.remove("opacity");
+            navbar.classList.remove("default"), navbar.classList.remove("invisible");
             navbar.classList.add("aesthetic-rectangle");
             navbar.classList.add("rectangle_animate_reverse");
             setTimeout(() => {
-                navbar.classList.remove('rectangle_animate_reverse'), navbar.classList.add("opacity");
+                navbar.classList.remove('rectangle_animate_reverse'), navbar.classList.add("invisible");
             }, 400);
         };
         document.getElementById("try5").addEventListener("click", function() {
@@ -183,5 +211,5 @@ button.addEventListener("click", function() {
         });
     
     </script>
-  
+  </body>
 </html>
